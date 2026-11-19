@@ -52,24 +52,42 @@ interface Profile {
 
 const UserProfile = () => {
 
-  const storedUserData = localStorage.getItem('userData');
-  const storedUserId = storedUserData ? JSON.parse(storedUserData).userId : null;
-  console.log("storedUserId", storedUserId);
+ const [id, setId] = useState<string | null>(null);
+const [profile, setProfile] = useState<Profile | null>(null);
+const [loading, setLoading] = useState(true);
+const [error, setError] = useState<string | null>(null);
+const [isEditing, setIsEditing] = useState(false);
+const [updatedProfile, setUpdatedProfile] = useState<Partial<Profile>>({});
 
-  // const params = useParams()
-  // const userId = params?.id as string | undefined
-  const [id]= useState(storedUserId);
-  const [profile, setProfile] = useState<Profile | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-  const [isEditing, setIsEditing] = useState(false)
-  const [updatedProfile, setUpdatedProfile] = useState<Partial<Profile>>({})
+useEffect(() => {
+  try {
+    const storedUserData = localStorage.getItem("userData");
 
-  useEffect(() => {
-    fetchProfile()
-  }, []) // Removed userId from dependencies
+    if (storedUserData) {
+      const parsedData = JSON.parse(storedUserData);
+      if (parsedData.userId) {
+        setId(parsedData.userId);
+      } else {
+        setError("No user ID found");
+        setLoading(false);
+      }
+    } else {
+      setError("No user data found");
+      setLoading(false);
+    }
+  } catch (error) {
+    setError("Invalid user data");
+    setLoading(false);
+  }
+}, []);
 
-  const fetchProfile = async () => {
+useEffect(() => {
+  if (id) {
+    fetchProfile(id);
+  }
+}, [id]);
+
+const fetchProfile = async (userId: string) => {
     if (!id) {
       setError("No user ID provided")
       setLoading(false)
@@ -77,7 +95,7 @@ const UserProfile = () => {
     }
 
     try {
-      const response = await axios.get(`${apiBaseURL}/personalDetails/get/${id}`)
+      const response = await axios.get(`${apiBaseURL}/personalDetails/get/${userId}`)
       console.log("response", response);
       console.log("userId", id);
       
