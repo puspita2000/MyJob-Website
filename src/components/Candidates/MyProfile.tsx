@@ -75,9 +75,10 @@ useEffect(() => {
       setError("No user data found");
       setLoading(false);
     }
-  } catch (error) {
-    setError("Invalid user data");
-    setLoading(false);
+  } catch (err) {
+  console.error("User data error:", err);
+  setError("Invalid user data");
+  setLoading(false);
   }
 }, []);
 
