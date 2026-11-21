@@ -86,11 +86,11 @@ export default function ContactUs() {
             </Typography>
             <Box display="flex" alignItems="center" mb={2}>
               <LocationOn color="primary" sx={{ mr: 2 }} />
-              <Typography>Plot No-HIG-42, Ground Floor, Gangadhar Meher Marg, Jayadev Vihar, Bhubaneswar, 751013</Typography>
+              <Typography>4th Floor, Arya Surya Enclave, Plot No- K5/475, 475, Patrapada, Bhubaneswar, 751013</Typography>
             </Box>
             <Box display="flex" alignItems="center" mb={2}>
               <Phone color="primary" sx={{ mr: 2 }} />
-              <Typography>+91 9776666555</Typography>
+              <Typography>+91 9583333030</Typography>
             </Box>
             <Box display="flex" alignItems="center" mb={2}>
               <Email color="primary" sx={{ mr: 2 }} />

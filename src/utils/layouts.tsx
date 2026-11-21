@@ -43,8 +43,8 @@ export const navigation = {
   }
   
   export const companyInfo = {
-    phone: '+91 9776666555',
-    address: 'Plot No-HIG-42, Ground Floor, Gangadhar Meher Marg, Jayadev Vihar, Bhubaneswar, 751013',
+    phone: '+91 9583333030',
+    address: '4th Floor, Arya Surya Enclave, Plot No- K5/475, 475, Patrapada, Bhubaneswar, 751019',
     email: 'info@utkalone.com',
   }
   
