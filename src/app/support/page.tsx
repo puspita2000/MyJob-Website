@@ -5,7 +5,6 @@ import React from 'react';
 import Link from 'next/link';
 import {
   Mail,
-  Phone,
   MessageCircle,
   HelpCircle,
   UserRound,
@@ -54,7 +53,7 @@ export default function SupportPage() {
           </h1>
 
           <p className="text-gray-500 mt-5 leading-7">
-            We're here to help you with your job search, recruitment
+            We&apos;re here to help you with your job search, recruitment
             activities, account-related queries and technical issues.
             Contact our support team for assistance.
           </p>
@@ -95,7 +94,7 @@ export default function SupportPage() {
             </h2>
 
             <p className="text-gray-300 text-sm leading-7 mb-6">
-              Send us your questions or describe the issue you're
+              Send us your questions or describe the issue you&apos;re
               experiencing. Our support team will assist you.
             </p>
 

@@ -7,7 +7,6 @@ import {
   Trash2,
   ShieldCheck,
   AlertTriangle,
-  Mail,
   ArrowLeft
 } from 'lucide-react';
 
@@ -72,7 +71,7 @@ I confirm that I am requesting deletion of my MyJob Services account and associa
             </h1>
 
             <p className="text-gray-300 text-sm leading-7 mt-4 max-w-lg mx-auto">
-              We're sorry to see you go. Submit a request to delete
+              We&apos;re sorry to see you go. Submit a request to delete
               your MyJob Services account and associated personal data.
             </p>
           </div>
