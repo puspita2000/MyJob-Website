@@ -28,10 +28,10 @@ export const navigation = {
     ],
     support: [
       { name: 'Contact Us', href: '/contact' },
-      { name: "Faq's", href: '/faqs' },
+      { name: "Help & Support", href: '/support' },
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms Of Service', href: '/terms' },
-      { name: 'Need Help', href: '/help' },
+      { name: 'Delete Account', href: '/delete-account' },
       { name: 'Live Chat', href: '/chat' },
     ],
     social: [
